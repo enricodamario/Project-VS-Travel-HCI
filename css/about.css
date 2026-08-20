@@ -1,0 +1,182 @@
+:root {
+  --light-blue: #add8e6;
+  --dark-blue: #003366;
+  --white: #ffffff;
+  --gray-light: #f0f4f8;
+  --error-red: #cc3333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gray-light);
+  color: var(--dark-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover,
+nav a:focus {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  outline: none;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+main {
+  padding: 2rem 0;
+  flex-grow: 1;
+}
+
+.hero {
+  background-image: url(../assets/background3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 54, 102, 0.4);
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Popular Destinations */
+.popular-destinations {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.popular-destinations h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--dark-blue);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.popular-destinations ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.popular-destinations ul li {
+  background-color: var(--white);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 150px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-blue);
+  min-width: 120px;
+}
+
+/* Responsive: Mobile and tablet */
+@media screen and (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+  }
+
+  .popular-destinations ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

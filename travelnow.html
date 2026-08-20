@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VSTravel - Travel Now</title>
+    <link rel="stylesheet" href="css/travelnow.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>VSTravel</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="travelnow.html" class="active">Travel Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <form id="travelForm" action="#" method="post">
+        <h2>Travel Booking Form</h2>
+
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name..."
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="number"
+          id="phone"
+          name="phone"
+          placeholder="Your phone number..."
+          required
+        />
+
+        <label for="participant">Total Participant</label>
+        <input
+          type="number"
+          id="participant"
+          name="participant"
+          placeholder="Number of participants..."
+          required
+        />
+
+        <label for="departure">Departure Date</label>
+        <input type="date" id="departure" name="departure" required />
+
+        <label for="return">Return Date</label>
+        <input type="date" id="return" name="return" required />
+
+        <label for="destination">Destination</label>
+        <select id="destination" name="destination" required>
+          <option value="">-- Select Destination --</option>
+          <option value="Bali">Bali</option>
+          <option value="Yogyakarta">Yogyakarta</option>
+          <option value="Jakarta">Jakarta</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Kuala Lumpur">Kuala Lumpur</option>
+        </select>
+
+        <div id="price-list" style="display: none">
+          <h3>Price Package for <span id="selected-destination"></span></h3>
+          <ul id="package-options"></ul>
+          <input type="hidden" id="selected-package" name="selected_package" />
+          <div style="text-align: center; margin-top: 2rem">
+            <button type="submit">Book Now</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="booking-success">
+        <div>
+          <h2>Booking Confirmed!</h2>
+          <p>Your travel package has been successfully booked.</p>
+          <button onclick="closeSuccess()">Close</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 VSTravel. All rights reserved.</p>
+    </footer>
+
+    <script src="js/travelnow.js"></script>
+  </body>
+</html>
