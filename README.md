@@ -7,3 +7,5 @@ HTML
 CSS
 
 JavaScript
+
+Author: Enrico Damario
